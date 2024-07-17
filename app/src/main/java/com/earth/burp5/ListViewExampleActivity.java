@@ -16,7 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class ListViewExampleActivity extends AppCompatActivity {
 
     ListView listView;
-    String[] languages = {"Java","C","C++","Python","JavaScript","php","Ruby","Perl","Scala","Kotlin"};
+    String[] languages = {"Java","C","C++","Python","JavaScript","php","Ruby","Perl","Scala","Kotlin","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,7 @@ public class ListViewExampleActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
         listView = findViewById(R.id.listView);
         ArrayAdapter arrayAdapter = new ArrayAdapter(ListViewExampleActivity.this, android.R.layout.simple_list_item_1, languages);
         listView.setAdapter(arrayAdapter);
