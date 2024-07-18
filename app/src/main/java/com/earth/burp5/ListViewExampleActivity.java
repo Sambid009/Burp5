@@ -16,7 +16,9 @@ import androidx.core.view.WindowInsetsCompat;
 public class ListViewExampleActivity extends AppCompatActivity {
 
     ListView listView;
-    String[] languages = {"Java","C","C++","Python","JavaScript","php","Ruby","Perl","Scala","Kotlin","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
+    String[] languages = {"Java","C"};
+    int[] itemImages = {R.drawable.ere,R.drawable.ere};
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +32,11 @@ public class ListViewExampleActivity extends AppCompatActivity {
         });
 
         listView = findViewById(R.id.listView);
-        ArrayAdapter arrayAdapter = new ArrayAdapter(ListViewExampleActivity.this, android.R.layout.simple_list_item_1, languages);
-        listView.setAdapter(arrayAdapter);
+        //----------------for single entries--------------------
+//        ArrayAdapter arrayAdapter = new ArrayAdapter(ListViewExampleActivity.this, android.R.layout.simple_list_item_1, languages);
+//        listView.setAdapter(arrayAdapter);
+        CustomListAdapter customListAdapter = new CustomListAdapter(ListViewExampleActivity.this, languages, itemImages);
+        listView.setAdapter(customListAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
