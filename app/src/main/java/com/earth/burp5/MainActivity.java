@@ -12,7 +12,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    Button btnlistView;
+    Button btnlistView, btnListView2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +34,18 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(sambid);
             }
         });
-
-
+        btnListView2 = findViewById(R.id.btnListView2);
+        btnListView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Start ListViewActivity
+                Intent sambid2 = new Intent(MainActivity.this, ListViewExampleActivity2.class);
+                startActivity(sambid2);
+            }
+        });
+        }
     }
-}
+
+
+
+

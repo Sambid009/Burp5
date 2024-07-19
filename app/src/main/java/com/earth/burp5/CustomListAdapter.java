@@ -42,8 +42,8 @@ public class CustomListAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View view, ViewGroup parent) {
         view = layoutinflater.inflate(R.layout.layout_list_item, null);
-        TextView textView = view.findViewById(R.id.tvListItem);
-        ImageView imageView = view.findViewById(R.id.imageListItem);
+        textView = view.findViewById(R.id.tvListItem);
+        imageView = view.findViewById(R.id.imageListItem);
         textView.setText(languages[position]);
         imageView.setImageResource(images[position]);
 

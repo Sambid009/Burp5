@@ -16,8 +16,8 @@ import androidx.core.view.WindowInsetsCompat;
 public class ListViewExampleActivity extends AppCompatActivity {
 
     ListView listView;
-    String[] languages = {"Java","C"};
-    int[] itemImages = {R.drawable.ere,R.drawable.ere};
+    String[] languages = {"Java","C","c#","C++","JavaScript","PHP","Python","React"};
+    int[] itemImages = {R.drawable.java,R.drawable.c,R.drawable.csharp,R.drawable.cplus,R.drawable.js,R.drawable.php,R.drawable.python,R.drawable.react};
 
 
     @Override
@@ -35,6 +35,8 @@ public class ListViewExampleActivity extends AppCompatActivity {
         //----------------for single entries--------------------
 //        ArrayAdapter arrayAdapter = new ArrayAdapter(ListViewExampleActivity.this, android.R.layout.simple_list_item_1, languages);
 //        listView.setAdapter(arrayAdapter);
+
+        //----------------for multiple entries--------------------
         CustomListAdapter customListAdapter = new CustomListAdapter(ListViewExampleActivity.this, languages, itemImages);
         listView.setAdapter(customListAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

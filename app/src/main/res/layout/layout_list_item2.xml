@@ -1,29 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
-<ImageView
-    android:layout_width="50dp"
-    android:layout_height="50dp"
-    android:id="@+id/imageListItem"
-    android:src="@drawable/ere">
-</ImageView>
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/imageListItem2"
+        android:src="@drawable/ere">
+    </ImageView>
 
-<TextView
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/tvListItem"
+        android:id="@+id/tvListItem2"
         android:text="text"
         android:textStyle="bold"
         android:textColor="@color/black"
         android:layout_gravity="center"
         android:layout_marginLeft="16dp">
-</TextView>
-
-
-
+    </TextView>
 
 </LinearLayout>
