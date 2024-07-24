@@ -22,5 +22,11 @@
         android:layout_height="wrap_content"
         android:width="170dp"
         android:text="another button" />
+    <Button
+        android:id="@+id/btnGridView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="170dp"
+        android:text="GridView button" />
 
 </LinearLayout>

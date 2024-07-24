@@ -12,7 +12,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    Button btnlistView, btnListView2;
+    Button btnlistView, btnListView2, btnGridView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +43,19 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(sambid2);
             }
         });
+
+        btnGridView = findViewById(R.id.btnGridView);
+
+        btnGridView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Start ListViewActivity
+                Intent sambid3 = new Intent(MainActivity.this, GridViewExampleActivity.class);
+                startActivity(sambid3);
+            }
+        });
+
+
         }
     }
 
